@@ -1,0 +1,40 @@
+:root{--bg:#0b0e1a;--panel:#11152a;--panel2:#171c36;--line:#262d57;--frame:#070913;--text:#e9ecff;--muted:#8a93c2;--buy:#2fe38a;--sell:#ff4d6d;--warn:#ffd84d;--blue:#4dc3ff;--violet:#a78bfa;--pink:#ff7ad9;--orange:#ff9f43}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--frame);color:var(--text);font:13px/1.5 ui-monospace,"JetBrains Mono","Cascadia Mono",Consolas,monospace}
+.frame{max-width:1280px;margin:0 auto;padding:10px;background:var(--bg);min-height:100vh;border-left:1px solid var(--line);border-right:1px solid var(--line)}
+header{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:8px 4px 12px;border-bottom:1px solid var(--line)}
+.brand{font-weight:800;letter-spacing:.08em;font-size:18px}.logo{color:var(--buy)}
+nav{display:flex;gap:4px;flex-wrap:wrap;flex:1}
+nav button{background:transparent;color:var(--muted);border:1px solid transparent;border-radius:6px;padding:6px 10px;font:inherit;cursor:pointer;text-transform:uppercase;letter-spacing:.05em;font-size:11px}
+nav button:hover{color:var(--text)}nav button.on{color:var(--text);border-color:var(--line);background:var(--panel2)}
+.hdr-right{display:flex;gap:12px;align-items:center}
+.badge{background:#2a1f12;color:var(--warn);border:1px solid #5b4a1a;border-radius:6px;padding:3px 8px;font-size:11px;font-weight:700}
+.muted{color:var(--muted)}.buy{color:var(--buy)}.sell{color:var(--sell)}.warn{color:var(--warn)}
+.disclaimer{margin:10px 0;padding:8px 12px;border:1px solid #5b4a1a;background:#1d1809;color:#e8d692;border-radius:6px;font-size:12px}
+.grid{display:grid;gap:10px}.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:1000px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.g2,.g3,.g4{grid-template-columns:1fr}nav{order:3;flex-basis:100%}}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:12px;margin-bottom:10px;min-width:0}
+.panel h2{margin:0 0 8px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.panel h3{margin:10px 0 6px;font-size:13px}
+.kpi{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:10px}
+.kpi .l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}.kpi .v{font-size:24px;font-weight:700;margin-top:2px}.kpi .s{font-size:11px;color:var(--muted)}
+.verdict{border-left:4px solid var(--warn);background:#16140c}
+.verdict.good{border-color:var(--buy);background:#0e1a14}.verdict.bad{border-color:var(--sell);background:#1c0f14}
+.tablewrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th,td{padding:5px 8px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+th:first-child,td:first-child{text-align:left}th{color:var(--muted);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.04em;position:sticky;top:0;background:var(--panel)}
+tr.hl td{background:#15213a}
+.chart{position:relative;height:320px}.chart.sm{height:220px}
+select,input,button.act{background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:6px;padding:5px 8px;font:inherit}
+button.act{cursor:pointer}button.act:hover{border-color:var(--blue)}button.danger:hover{border-color:var(--sell)}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+.tag{display:inline-block;border-radius:4px;padding:1px 6px;font-size:11px;font-weight:700}
+.tag.ok{background:#12301f;color:var(--buy)}.tag.no{background:#321320;color:var(--sell)}.tag.df{background:#2a2410;color:var(--warn)}
+.pill{padding:2px 8px;border-radius:10px;font-size:11px;font-weight:700}
+.LONG{background:#12301f;color:var(--buy)}.FLAT{background:#1b2040;color:var(--muted)}.BUY-SIGNAL{background:#2a2410;color:var(--warn)}
+.heat td.c{text-align:center;font-weight:700}
+footer{margin-top:14px;padding:10px 4px;border-top:1px solid var(--line);font-size:11px}
+ul.clean{margin:6px 0;padding-left:18px}ul.clean li{margin:3px 0}
+.small{font-size:11px}

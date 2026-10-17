@@ -1,0 +1,7 @@
+fastapi==0.143.3
+uvicorn==0.54.0
+pandas==3.0.6
+numpy==2.5.4
+numba==0.68.0
+scipy==1.18.1
+requests==2.34.2
